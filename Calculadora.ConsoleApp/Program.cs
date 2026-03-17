@@ -1,4 +1,4 @@
-﻿string[] historicoOperacoes = new string[100];
+﻿string[] historicoOperacoes = new string[1000];
 int contadorOperacoes = 0;
 int resultado = 0;
 string textoOperacao = " ";
@@ -123,6 +123,14 @@ int segundoNumero = Convert.ToInt32(strsegundoNumero);
 
     if (contadorOperacoes < historicoOperacoes.Length)
     {
+        historicoOperacoes[contadorOperacoes] = textoOperacao;
+        contadorOperacoes++;
+    }
+    else
+    {
+        historicoOperacoes = new string[100];
+        contadorOperacoes = 0;
+
         historicoOperacoes[contadorOperacoes] = textoOperacao;
         contadorOperacoes++;
     }
